@@ -48,6 +48,18 @@ Todas as funcionalidades da aplicação foram implementadas seguindo histórias 
 Trabalhamos com a premissa Mobile first. Todas funcionalidades desenvolvidas foram testadas por diversos usuários acessando a rede social de diferentes dispositivos, de modo a testar e garantir a responsividade das janelas.
 
 ## Considerações técnicas
-As principais tecnologias empregadas foram: HTML, CSS E Javascript. Nossa rede social é uma SPA (Single Page Application), o que garante ao usuário uma experiência fluida e leve, considerando que o princípio das SPA's é trazer conteúdos dinâmicos de múltiplas telas sem necessidade de renderizações completas a cada ação. Para o armazenamento, edição e acesso de dados, foi utilizada a plataforma Firebase, do Google.
+
+- **Planejamento: [Trello](https://trello.com/b/4XM8LtyK/projeto-social-network)**
+- **Protótipos: [Figma](https://www.figma.com/file/yDXGLSnLbvVxID2VKt9aMt/Projeto-Social-Network?node-id=0%3A1)**
+- **HTML5** <img alt="html5" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" />
+- **CSS3** <img alt="css3" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" />    
+- **JavaScript** <img alt="JS" height="20" width="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />   
+- **JSX** <img alt="jsx" height="20" width="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+- **Node JS** <img alt="node" height="20" width="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain.svg" />     
+- **Jest** <img alt="jest" height="20" width="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" />
+- **Firebase** <img alt="firebase" height="20" width="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain-wordmark.svg" />
+- **Git** <img alt="git" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" />
+- **GitHub** & **GitHubProjects** <img alt="github" height="20" width="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" />
+- **Visual Studio Code** <img alt="vscode" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain-wordmark.svg" />
   
 </div>
