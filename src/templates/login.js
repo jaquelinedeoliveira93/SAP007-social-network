@@ -1,26 +1,28 @@
-import { signIn, validateEmail } from "../lib/auth-firebase.js";
+import { signIn, registerGoogle, validateEmail } from "../lib/auth-firebase.js"; // eslint-disable-line no-unused-vars
 
 export default function login() {
   const container = document.createElement("div");
-  container.classList.add("login-page")
+  container.classList.add("login-page");
 
   container.innerHTML = `
     <div class="main">
         <div class="left">
-            <h1>nome da rede<br>A primeira rede social brasileira para colecionadores de HQ's!</h1>
-            <img src="images/bookreading.svg" alt="menina lendo um livro">
-        </div>
+        <img src="images/wowlogo_1.svg" alt="logo escrito WOW">
+                    </div>
         <div class="right">
             <div class="card-login">
                 <h2>LOGIN</h2>
                 <div class="textfield">
                     <label for="usuario">E-mail</label>
-                    <input type="text" name="e-mail" placeholder="e-mail" id="inputEmail">
+                    <input type="text" name="e-mail" placeholder="Digite seu e-mail" id="inputEmail">
                 </div>  
                 <div class="textfield">
                     <label for="senha">Senha</label>
-                    <input id="password" type="password" name="senha" placeholder="Senha">
-                </div>     
+                    <input id="password" type="password" name="senha" placeholder="Digite sua senha">
+                </div>   
+                <div>  
+                <button id="button-google-register" class="button-google-register"><img src="./images/google.png" class="logo-google-register" alt="logo do google"></button>
+              </div>
                 <button id="signin-button" class="botaologin">ENTRAR</button>
                 <button id="register">Faça seu cadastro</button>             
             </div>
@@ -34,72 +36,50 @@ export default function login() {
     window.location.hash = "register";
   });
 
-const email = container.querySelector('#inputEmail');
-const password = container.querySelector('#password');
-const loginError = container.querySelector('#loginError');
-const signInButton = container.querySelector('#signin-button');
+  const email = container.querySelector("#inputEmail");
+  const password = container.querySelector("#password");
+  const loginError = container.querySelector("#loginError");
+  const signInButton = container.querySelector("#signin-button");
 
+  signInButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (email.value) {
+      signIn(email.value, password.value)
+        .then(() => {
+          window.location.hash = "home";
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          if (errorCode === "email-already-in-use") {
+            loginError.style.color = "red";
+            loginError.innerHTML = "Não há registro de usuário correspondente a este e-mail";
+          } else if (errorCode === "auth/wrong-password") {
+            loginError.style.color = "red";
+            loginError.innerHTML = "Senha inválida";
+          }
+        });
+    } else {
+      loginError.innerHTML = "Preencha o campo de E-mail";
+    }
+  });
 
-signInButton.addEventListener('click', (e) => {
-  e.preventDefault();
-  if (email.value) {
-    signIn(email.value, password.value)
+  const googleButton = container.querySelector(".button-google-register");
+  googleButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    registerGoogle()
       .then(() => {
-        window.location.hash = "home"; 
+        window.location.hash = "#home";
       })
       .catch((error) => {
-        const errorCode = error.code;
-        if (errorCode === "email-already-in-use") {
+        if (error.code === "auth/invalid-email") {
           loginError.style.color = "red";
-          loginError.innerHTML = "Não há registro de usuário correspondente a este e-mail";
-        } else if (errorCode === "auth/wrong-password") {
+          loginError.innerHTML = "E-mail inválido";
+        } else if (error.code === "auth/invalid-password") {
           loginError.style.color = "red";
           loginError.innerHTML = "Senha inválida";
         }
       });
-  } else {
-   loginError.innerHTML="Preencha o campo de E-mail";
-  }
+  });
 
-});
-
-return container;
-
-
+  return container;
 }
-
-
-
-
-
-
-
-
-
-/*import {registerPage} from './register.js';
-
-export const loginPage = () => {
-    const containerRoot = document.getElementById('root');
-    const loginSection = document.createElement('section');
-    loginSection.className = 'loginSection';
-    const login = `  
-      </div>
-      <div class= "sectionLogin">
-        <div class= "loginForm">
-          <input type="email" id="loginEmail" class="loginEmail" placeholder="E-mail">
-          <input type="password" id="loginPassword" class="loginPassword" placeholder="Senha">
-          <button  class="btnLogin" id="btnLogin"> Iniciar sessão</button>
-        </div>
-        <div class="loginOption">
-          <p>Iniciar sessão com</p>
-          <img src="./images/google.png" id="googleLogo" class="googleLogo">
-          <div class="userReg">
-          Não tem conta?  
-           <label for="btn-moda" class="lbl-moda">
-           <strong>Registre-se!</strong>  
-           </label>
-           </div>
-        </div>
-      </div>
-      `
-}*/

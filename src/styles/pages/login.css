@@ -39,7 +39,11 @@
 }
 
 .right .card-login {
+<<<<<<< HEAD
     background-color: #403d39;
+=======
+    background-color: black; 
+>>>>>>> d2be28f265f1a8d94798a534358d7c31d1d60481
     width: 60%;
     display: flex;
     justify-content: center;
@@ -52,7 +56,12 @@
 }
 
 .right .card-login h2 {
+<<<<<<< HEAD
     color: black;
+=======
+    color: rgba(184, 114, 250, 0.897)f9c936
+    font-weight: 800;
+>>>>>>> d2be28f265f1a8d94798a534358d7c31d1d60481
     margin: 0;
 }
 
@@ -96,14 +105,24 @@
     width: 100%;
     border: none;
     border-radius: 10px;
+<<<<<<< HEAD
     padding: 15px;
     background-color: white;
     color: rgb(73, 71, 71);
+=======
+    padding: 15px;   
+    background-color: white;
+    color: rgb(200, 202, 204);
+>>>>>>> d2be28f265f1a8d94798a534358d7c31d1d60481
     font-size: 12pt;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 10px 40px;
     outline: none;
     box-sizing: border-box;
+<<<<<<< HEAD
     background-image: url(images/password.svg);
+=======
+    background-image:url(images/password.svg);
+>>>>>>> d2be28f265f1a8d94798a534358d7c31d1d60481
 }
 
 .botaologin,
@@ -122,8 +141,7 @@
     box-shadow: #f9c936 0px 10px 40px -12px;
 }
 
-.botaologin:hover,
-#register {
+.botaologin:hover, #register {
     background-color: #ffc20a;
 }
 

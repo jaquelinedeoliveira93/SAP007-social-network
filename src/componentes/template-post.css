@@ -1,78 +1,98 @@
-.body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Noto Sans', sans-serif;
+.body-template-post {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans', sans-serif;
+  
 }
 
 .section-post {
-    max-width: 900px;
-    margin: 0px 30px;
+  max-width: 900px;
+  margin: 0px 30px;
+
 }
 
 .section-post-published {
-    width: 79%;
-    height: 263px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background: rgb(235, 233, 240);
-    border-radius: 10px;
-    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.2);
-    padding: 12px 25px;
-    margin: 30px 11px 0px;
+  width: 82%;
+  height: 263px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: rgb(235, 233, 240);
+  border-radius: 10px;
+  box-shadow: 1px 0 3px rgba(0, 0, 0, 0.2);
+  padding: 12px 25px;
+  margin: 30px 0px 0px;
+  background-color: #FFEBAD;
 }
 
 .username-post{
-    margin-bottom: 0;
-    margin-top: 0;
-    font-size: 18px;
-    font-weight: bold;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .date-post {
-    margin-top: 0;
-    font-size: 11px;
-    font-weight: lighter;
+  margin-top: 0;
+  font-size: 11px;
+  font-weight: lighter;
 }
 
 .HQ-title-post {
-    margin-bottom: 0;
-    margin-top: 8px;
-    font-size: 14px;
-    font-weight: bold;
+  margin-bottom: 0;
+  margin-top: 8px;
+  font-size: 17px;
+  font-weight: bold;
 }
 
 .message-post {
-    margin-bottom: 0;
-    margin-top: 4px;
-    font-size: 13px;
+  margin-bottom: auto;
+  font-size: 13px;
+  padding: auto;
 }
 
 .buttons-edit-delete {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .edit-button {
-    margin-left: 105px;
+  margin-left: 167px;
 }
 
 .post-delete-button {
-    margin-left: 6px;
+  margin-left: 6px;
 }
 .edit-button, .post-delete-button {
-    text-transform: uppercase;
-    font-size: 11px;
-    border-radius: 5px;
-    border: 1px solid;
-    padding: 5px;
-    font-weight: bold;
-    cursor: pointer;
+  text-transform: uppercase;
+  font-size: 11px;
+  border-radius: 5px;
+  border: 1px solid;
+  padding: 5px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.likes-post {
-    margin-left: 180px;
-    margin-top: 3px;
-    margin-bottom: 7px;
+.button-like {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+}
+
+.img-like {
+  width: 25px;
+  height: 25px;
+}
+
+.like-counter {
+  margin: 0;
+  padding: 0;
+}
+
+.container-like {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

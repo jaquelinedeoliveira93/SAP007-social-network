@@ -1,2 +1,1 @@
-import "./lib/config-firebase.js";
-
+// import "./lib/config-firebase.js";
