@@ -6,8 +6,12 @@
     align-items: center;
 }
 
+.logo {
+    height: 500%;
+}
+
 .left {
-    width: 50vw;    
+    width: 50vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -27,29 +31,50 @@
 }
 
 .right {
-    width: 50vw;    
+    width: 50vw;
     height: 100vh;
     display: flex;
-    justify-content: center;    
+    justify-content: center;
     align-items: center;
 }
 
 .right .card-login {
-    background-color: #241d3f; 
+    background-color: #403d39;
     width: 60%;
     display: flex;
-    justify-content: center;    
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 30px 35px;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 10px 40px;
+    font-weight: 500;
 }
 
 .right .card-login h2 {
-    color: rgba(189, 124, 250, 0.829);
-    font-weight: 800;
+    color: black;
     margin: 0;
+}
+
+#inputEmail {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' stroke-width='1.5' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 9L12 12.5L17 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M2 17V7C2 5.89543 2.89543 5 4 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H4C2.89543 19 2 18.1046 2 17Z' stroke='currentColor' stroke-width='1.5'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: 8%;
+    background-position: 4%;
+    padding-left: 25%;
+}
+
+#password {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' stroke-width='1.5' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 12H17.4C17.7314 12 18 12.2686 18 12.6V19.4C18 19.7314 17.7314 20 17.4 20H6.6C6.26863 20 6 19.7314 6 19.4V12.6C6 12.2686 6.26863 12 6.6 12H8M16 12V8C16 6.66667 15.2 4 12 4C8.8 4 8 6.66667 8 8V12M16 12H8' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E ");
+    background-repeat: no-repeat;
+    background-size: 8%;
+    background-position: 4%;
+    padding-left: 25%;
+}
+
+::placeholder { 
+  text-align: center;
+
 }
 
 .textfield {
@@ -59,7 +84,7 @@
     align-items: flex-start;
     justify-content: center;
     margin: 10px 0;
-}    
+}
 
 .textfield label {
     margin-bottom: 10px;
@@ -71,16 +96,18 @@
     width: 100%;
     border: none;
     border-radius: 10px;
-    padding: 15px;   
-    background-color: rgb(63, 51, 90); 
-    color: rgb(200, 202, 204);
+    padding: 15px;
+    background-color: white;
+    color: rgb(73, 71, 71);
     font-size: 12pt;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 10px 40px;
     outline: none;
     box-sizing: border-box;
+    background-image: url(images/password.svg);
 }
 
-.botaologin, #register {
+.botaologin,
+#register {
     width: 100%;
     padding: 16px 0;
     margin: 25px;
@@ -90,19 +117,20 @@
     font-weight: 800;
     letter-spacing: 1px;
     color: #171329;
-    background-color: rgba(184, 115, 248, 0.829);
+    background-color: #f9c936;
     cursor: pointer;
-    box-shadow: rgba(149, 42, 248, 0.829) 0px 10px 40px -12px;
+    box-shadow: #f9c936 0px 10px 40px -12px;
 }
 
-.botaologin:hover, #register {
-    background-color: rgba(149, 42, 248, 0.829);
+.botaologin:hover,
+#register {
+    background-color: #ffc20a;
 }
 
-@media only screen and (max-width:950px){
+@media only screen and (max-width:950px) {
     .card-login {
         width: 85%;
-    }    
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -118,23 +146,28 @@
     .left {
         width: 100%;
         height: auto;
-    } 
+    }
 
     .right {
         width: 100%;
         height: auto
     }
-   
+
     .left img {
         width: 60vw;
     }
-    
+
     .card-login {
         height: 50vh;
     }
 
     .card-login h2 {
-       font-size: 7vw;
+        font-size: 7vw;
     }
 }
 
+/* #password {
+    background: url(images/password.svg) no-repeat scroll 7px 7px;
+    padding-left:30px;
+    background-color: white;
+} */
